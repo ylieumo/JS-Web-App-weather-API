@@ -1,5 +1,5 @@
 const apiKey = 'b60e31d6340e31d967bb69ec0b9b10b9'; 
-// Replace with your API key
+
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 export async function getWeatherData(city) {
@@ -18,3 +18,20 @@ export async function getWeatherData(city) {
         throw error;
     }
 }
+
+export const postData = async (city, body) => {
+    try {
+      const response = await fetch(`${url}/${ciyt}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error posting data:', error);
+      throw error;
+    }
+  };
