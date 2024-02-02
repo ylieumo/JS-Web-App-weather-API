@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #app {
+            text-align: center;
+            padding: 100px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Yolande API's Weather App</h1>
+        <label for="cityInput">Enter City:</label>
+        <input type="text" id="cityInput" />
+        <button id="getWeatherBtn">Get Weather</button>
+        <div id="weatherInfo"></div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
